@@ -1,0 +1,653 @@
+body {
+            margin: 0px;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: "Quicksand", sans-serif;
+            background:
+                radial-gradient(circle at 60% 20%, rgba(0, 255, 200, 0.28), transparent 55%),
+                radial-gradient(circle at 80% 30%, rgba(0, 230, 190, 0.42), transparent 55%),
+                radial-gradient(circle at 0% 100%, rgba(0, 120, 120, 0.38), transparent 55%),
+                #031f16;
+            background-attachment: fixed;
+
+        }
+
+        .glavni {
+
+            width: 100vw;
+            height: 100vh;
+            
+
+
+            
+            max-height: 100vh;
+
+
+        }
+
+
+
+        .crni {
+            position: relative;
+            top: -20px;
+            width: 100vw;
+            height: 40vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            border-bottom-left-radius: 40%;
+            border-bottom-right-radius: 60%;
+            box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.8);
+
+
+        }
+
+        #prvi {
+            position: absolute;
+            top: 9vh;
+            left: 50%;
+            transform: translateX(-59%);
+
+            font-weight: 800;
+            white-space: nowrap;
+            font-size: 5vw;
+
+
+
+        }
+
+        #drugi {
+            position: absolute;
+            top: 22vh;
+            left: 50%;
+            transform: translateX(0%);
+            letter-spacing: 1rem;
+
+            font-size: 3vw;
+            letter-spacing: 1vw;
+
+        }
+
+        h1 {
+            opacity: 0.9;
+        }
+
+        .nav {
+            position: fixed;
+            width: 40vw;
+            height: 8vh;
+            padding: 10px 20px;
+            
+            border-radius: 30vh;
+            background-color: #ffffff;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0.8;
+            z-index: 1;
+
+            display: flex;
+            
+            align-items: center;
+            
+            justify-content: center;
+            
+            box-sizing: border-box;
+            
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            
+            list-style: none;
+
+            gap: 2vw;
+            font-size: 0.9vw;
+            font-weight: 1000;
+            margin: 0;
+            
+            padding: 0;
+            
+        }
+
+        ul li a {
+            text-decoration: none;
+            
+            color: #000000;
+            font-size: 11px;
+            
+        }
+
+        ul li a:hover {
+            color: #5d5e5e;
+            
+            text-decoration: none;
+            
+        }
+
+        .ispis {
+            width: 30vw;
+            height: 5vh;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10vh;
+            text-align: center;
+            opacity: 0.8;
+
+        }
+
+        #nema {
+            font-size: 2vw;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        #svi {
+            display: flex;
+            gap: 5vw;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            align-items: center;
+
+
+            margin-top: -3vh;
+
+            padding-bottom: 70px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        #tr {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 0.8vw;
+            border-radius: 2vw;
+            color: #ffffff;
+        }
+
+        #pr:hover,
+        #dr:hover,
+        #poc:hover {
+            background-color: #000000;
+            padding: 0.8vw;
+            border-radius: 2vw;
+            color: #ffffff;
+
+        }
+
+        #tr:hover {
+
+            color: #919191;
+        }
+
+        .osnovni {
+            width: 25vw;
+            height: 20vh;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 1vw;
+            color: #ffffff;
+            border-radius: 7vh;
+            box-shadow: 1vh 1vh 3vh 0px rgba(0, 0, 0, 0.8);
+            position: relative;
+        }
+
+        h3 {
+            position: absolute;
+            top: 1vh;
+            left: 2vw;
+            letter-spacing: 0.3vw;
+            font-size: 1vw;
+            font-weight: 900;
+
+
+        }
+
+        .zadatak {
+            position: absolute;
+            top: 6vh;
+            left: 2vw;
+            font-size: 1.3vw;
+        }
+
+        .check {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 2vh;
+            right: 2vw;
+            width: 20px;
+            height: 20px;
+            border: 0.3vh solid #ffffff;
+            border-radius: 50%;
+
+            appearance: none;
+
+            -webkit-appearance: none;
+
+            -moz-appearance: none;
+
+            outline: none;
+            cursor: pointer;
+            vertical-align: middle;
+            box-shadow: 1vh 1vh 3vh 0px rgba(0, 0, 0, 0.8);
+
+        }
+
+        .check:checked {
+            background-color: #ffffff;
+
+            border-color: #ffffff;
+
+        }
+
+        .izbrisi {
+            position: absolute;
+            bottom: 2vh;
+            right: 5vw;
+            border-radius: 3vh;
+            padding: 1vh 1vw;
+            border-style: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            font-size: 2vh;
+            font-weight: 200;
+            letter-spacing: 1px;
+            box-shadow: 1vh 1vh 3vh 0px rgba(0, 0, 0, 0.8);
+        }
+
+        .izbrisi:hover {
+            background-color: #dbdbdb;
+            color: #000000;
+            transform: scale(1.1);
+
+
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            border-radius: 15px;
+            background-color: #000000;
+            justify-content: space-between;
+            height: 40px;
+            padding: 10px;
+            gap: 4px;
+            border: none;
+            display: none;
+        }
+
+        .bar {
+            width: 20px;
+            height: 1px;
+            background-color: #ffffff;
+            border-radius: 20%;
+
+
+        }
+
+        @media (max-width: 768px) {
+            ul {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+            ul.active{
+                display: flex;
+                flex-direction: column;
+                font-size: 15px;
+                gap: 30px;
+                align-items: center;
+            }
+            div.active{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                height: 50vh;
+                justify-content: flex-start;
+                gap: 30px;
+                border-radius: 30px;
+                font-size: 15px;
+            }
+
+            .nav {
+                width: 80vw;
+            }
+
+            .osnovni {
+                width: 90vw;
+                height: 17vh;
+
+            }
+
+            h3 {
+                font-size: 5vw;
+                left: 7vw;
+            }
+            #nema{
+                font-size: 20px;
+            }
+
+            .zadatak {
+                font-size: 5vw;
+                left: 7vw;
+            }
+
+            #svi {
+                gap: 6vh;
+
+            }
+
+            .check {
+                bottom: 2vh;
+                right: 8vw;
+                width: 20px;
+                height: 20px;
+            }
+
+            .izbrisi {
+                bottom: 2vh;
+                right: 18vw;
+                font-size: 2.5vw;
+                padding: 1.1vh 2vw;
+
+            }
+
+
+
+            #prvi {
+                font-size: 10vh;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            #drugi {
+                font-size: 6vh;
+
+            }
+
+
+        }
+
+        @media (min-width: 769px) and (max-width: 991px) {
+
+
+            .hamburger {
+                display: none;
+            }
+
+            .nav {
+                width: 60vw;
+
+            }
+
+            ul {
+                font-size: 1.4vw;
+            }
+
+            ul li a {
+                padding: 1vw;
+            }
+
+            .osnovni {
+                width: 45vw;
+                height: 17vh;
+
+
+            }
+
+            #svi {
+                gap: 4vw;
+            }
+
+            h3 {
+                font-size: 2.5vw;
+                left: 4vw;
+            }
+
+            .zadatak {
+                font-size: 2.5vw;
+                left: 4vw;
+            }
+
+            .check {
+                bottom: 2vh;
+                right: 5vw;
+                width: 20px;
+                height: 20px;
+            }
+
+            .izbrisi {
+                bottom: 2vh;
+                right: 10vw;
+                font-size: 1.1vw;
+                padding: 1.1vh 2vw;
+
+            }
+
+
+
+            #prvi {
+                font-size: 10vh;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            #drugi {
+                font-size: 6vh;
+
+            }
+
+
+        }
+
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .nav {
+                width: 70vw;
+
+            }
+
+            ul {
+                font-size: 1.5vh;
+            }
+
+
+            ul {
+                font-size: 1.4vw;
+            }
+
+            ul li a {
+                padding: 1vw;
+            }
+
+            .osnovni {
+                width: 45vw;
+                height: 17vh;
+
+
+            }
+
+            #svi {
+                gap: 4vw;
+            }
+
+            h3 {
+                font-size: 2.5vw;
+                left: 4vw;
+            }
+
+            .zadatak {
+                font-size: 2.5vw;
+                left: 4vw;
+            }
+
+            .check {
+                bottom: 2vh;
+                right: 5vw;
+                width: 20px;
+                height: 20px;
+            }
+
+            .izbrisi {
+                bottom: 2vh;
+                right: 10vw;
+                font-size: 1.1vw;
+                padding: 1.1vh 2vw;
+
+            }
+
+
+
+            #prvi {
+                font-size: 10vh;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            #drugi {
+                font-size: 6vh;
+
+            }
+
+
+        }
+
+        @media (min-width: 1200px) and (max-width: 1439px) {
+            .nav {
+                width: 60vw;
+
+            }
+
+            ul {
+                font-size: 1.6vh;
+            }
+
+
+
+            #prvi {
+                font-size: 10vh;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            #drugi {
+                font-size: 7vh;
+                top: 21vh;
+                left: 52%;
+
+            }
+
+
+
+            .osnovni {
+                width: 27vw;
+                height: 17vh;
+
+
+            }
+
+            #svi {
+                gap: 5.5vw;
+            }
+
+            h3 {
+                font-size: 1.5vw;
+                left: 3vw;
+            }
+
+            .zadatak {
+                font-size: 1.5vw;
+                left: 3vw;
+            }
+
+            .check {
+                bottom: 2.4vh;
+                right: 2.5vw;
+                width: 20px;
+                height: 20px;
+            }
+
+            .izbrisi {
+                bottom: 2vh;
+                right: 6vw;
+                font-size: 0.9vw;
+                padding: 1.1vh 2vw;
+
+            }
+
+
+
+
+
+
+
+        }
+
+        @media (min-width: 1440px) {
+            .nav {
+                width: 50vw;
+
+            }
+
+            ul {
+                font-size: 1.6vh;
+            }
+
+
+
+            #prvi {
+                font-size: 10vh;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            #drugi {
+                font-size: 7vh;
+                top: 21vh;
+                left: 52%;
+
+            }
+
+
+
+            .osnovni {
+                width: 27vw;
+                height: 17vh;
+
+
+            }
+
+            #svi {
+                gap: 5.5vw;
+            }
+
+            h3 {
+                font-size: 1.5vw;
+                left: 3vw;
+            }
+
+            .zadatak {
+                font-size: 1.5vw;
+                left: 3vw;
+            }
+
+            .check {
+                bottom: 2.4vh;
+                right: 2.5vw;
+                width: 20px;
+                height: 20px;
+            }
+
+            .izbrisi {
+                bottom: 2vh;
+                right: 6vw;
+                font-size: 0.9vw;
+                padding: 1.1vh 2vw;
+
+            }
+        }
