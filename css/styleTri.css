@@ -201,7 +201,7 @@ body {
             top: 1vh;
             left: 2vw;
             letter-spacing: 0.3vw;
-            font-size: 1vw;
+            font-size: 16px;
             font-weight: 900;
 
 
@@ -211,7 +211,9 @@ body {
             position: absolute;
             top: 6vh;
             left: 2vw;
-            font-size: 1.3vw;
+            font-size: 16px;
+            max-width: 80%;
+            overflow-wrap: break-word;
         }
 
         .check {
@@ -300,6 +302,11 @@ body {
                 display: flex;
             }
 
+            ul li a{
+                font-size: 14px;
+                
+            }
+
             ul.active {
                 display: flex;
                 flex-direction: column;
@@ -335,12 +342,12 @@ body {
             }
 
             h3 {
-                font-size: 5vw;
+                
                 left: 7vw;
             }
 
             .zadatak {
-                font-size: 5vw;
+                
                 left: 7vw;
             }
 
@@ -412,12 +419,12 @@ body {
             }
 
             h3 {
-                font-size: 2.5vw;
+                
                 left: 4vw;
             }
 
             .zadatak {
-                font-size: 2.5vw;
+                
                 left: 4vw;
             }
 
@@ -483,12 +490,12 @@ body {
             }
 
             h3 {
-                font-size: 2.5vw;
+                
                 left: 4vw;
             }
 
             .zadatak {
-                font-size: 2.5vw;
+                
                 left: 4vw;
             }
 
@@ -562,12 +569,12 @@ body {
             }
 
             h3 {
-                font-size: 1.5vw;
+                
                 left: 3vw;
             }
 
             .zadatak {
-                font-size: 1.5vw;
+                
                 left: 3vw;
             }
 
@@ -633,12 +640,12 @@ body {
             }
 
             h3 {
-                font-size: 1.5vw;
+                
                 left: 3vw;
             }
 
             .zadatak {
-                font-size: 1.5vw;
+                
                 left: 3vw;
             }
 

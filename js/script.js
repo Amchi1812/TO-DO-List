@@ -13,6 +13,7 @@ function dodaj() {
     saveItem();
     posljednjiDodan();
     trenutno();
+    duzina();
 }
 
 
@@ -43,6 +44,8 @@ function posljednjiDodan() {
         element.style.textDecoration = "none";
         document.getElementById("checkbox").checked = false;
     }
+
+    
 }
 
 
@@ -100,9 +103,22 @@ function trenutno(){
     }
 }
 
+function duzina(){
+    if(niz.length === 0) return;
+
+    let posljednji = niz[niz.length - 1];
+    let d = posljednji.sadrzaj.length;
+
+    if (d>21){
+        document.getElementById("posljednjiD").style.fontSize="11px";
+        document.getElementById("posljednjiD").style.marginTop= "20px"
+    }else {document.getElementById("posljednjiD").style.fontSize="16px";}
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     loadTasks()
     trenutno();
+    duzina();
 
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".nav ul");
@@ -113,6 +129,8 @@ document.addEventListener('DOMContentLoaded', function () {
         nav.classList.toggle("active")
     });
 });
+
+
 
 
 

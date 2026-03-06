@@ -57,6 +57,16 @@ function render() {
             zadatak.style.textDecoration = "line-through";
         }
 
+        let brojKaraktera= t.sadrzaj.length;
+
+
+            if(brojKaraktera>21){
+                
+                zadatak.style.fontSize ="11px";
+
+            }else{naslov.style.fontSize ="16px";
+                zadatak.style.fontSize ="16px";}
+
         
 
 
@@ -80,6 +90,9 @@ function render() {
                 saveItem();
 
             }
+
+            
+            
         })
 
 

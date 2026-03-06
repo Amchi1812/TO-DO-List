@@ -58,6 +58,12 @@ function render() {
                 zadatak.style.textDecoration = "line-through";
             }
 
+            let brojKaraktera = t.sadrzaj.length;
+
+            if(brojKaraktera>21){
+                zadatak.style.fontSize="11px"
+            }else{zadatak.style.fontStyle="16px"}
+
 
 
 
