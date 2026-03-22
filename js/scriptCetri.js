@@ -2,7 +2,7 @@
 let niz = JSON.parse(localStorage.getItem('task')) || [];
 
 function akoNema() {
-    let niz2 = niz.filter(t => t.gotovo===false);
+    let niz2 = niz.filter(t => t.gotovo === false);
     if (niz2.length === 0) {
         document.getElementById("nema").innerHTML = "Trenutno nema nezavršenih taskova!";
     } else {
@@ -60,9 +60,9 @@ function render() {
 
             let brojKaraktera = t.sadrzaj.length;
 
-            if(brojKaraktera>21){
-                zadatak.style.fontSize="11px"
-            }else{zadatak.style.fontStyle="16px"}
+            if (brojKaraktera > 21) {
+                zadatak.style.fontSize = "11px"
+            } else { zadatak.style.fontStyle = "16px" }
 
 
 
@@ -96,6 +96,51 @@ function render() {
             izbrisi.innerHTML = "IZBRIŠI";
             izbrisi.classList.add('izbrisi');
             osnovni.appendChild(izbrisi);
+
+            let uredi = document.createElement('button');
+            uredi.innerHTML = "UREDI";
+            uredi.classList.add('uredi');
+            osnovni.appendChild(uredi);
+
+            uredi.addEventListener('click', function () {
+                let input = document.createElement('input');
+                input.type = "text";
+                input.value = t.sadrzaj;
+                input.classList.add('editovanje');
+
+                osnovni.replaceChild(input, zadatak);
+                input.focus();
+
+
+
+                input.addEventListener('keydown', function (e) {
+                    if (e.key === "Enter") {
+                        sacuvaj();
+                    }
+
+
+
+                })
+                function sacuvaj() {
+                    let noviTekst = input.value.trim();
+
+
+                    if (noviTekst.length > 120) {
+                        alert("Max 120 karaktera!");
+
+                    } else if (noviTekst == "") {
+                        alert("Greška! Nevalidan unos!");
+
+
+                    } else { t.sadrzaj = noviTekst; }
+
+                    saveItem();
+                    render();
+                }
+
+
+            })
+
 
             izbrisi.addEventListener('click', function () {
                 niz.splice(index, 1);

@@ -145,6 +145,16 @@ ul li a:hover {
     opacity: 0.8;
 
 }
+.editovanje{
+    background-color: transparent;
+    border-radius: 30px;
+    color: #ffffff;
+    position: absolute;
+    top: 8.3vh;
+    left:3vw;
+    width: 22vw;
+    padding: 4px;
+}
 
 #nema {
     font-size: 2vw;
@@ -266,6 +276,29 @@ h3 {
     font-weight: 200;
     letter-spacing: 1px;
     box-shadow: 1vh 1vh 3vh 0px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
+.uredi{
+    position: absolute;
+    bottom: 2vh;
+    right: 8vw;
+    border-radius: 3vh;
+    padding: 1vh 1vw;
+    border-style: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 2vh;
+    font-weight: 200;
+    letter-spacing: 1px;
+    box-shadow: 1vh 1vh 3vh 0px rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+.uredi:hover {
+    background-color: #dbdbdb;
+    color: #000000;
+    transform: scale(1.1);
+
+
 }
 
 .izbrisi:hover {
@@ -275,6 +308,8 @@ h3 {
 
 
 }
+
+
 
 .hamburger {
     display: flex;
@@ -297,6 +332,8 @@ h3 {
 
 
 }
+
+
 
 @media (max-width: 768px) {
     ul {
@@ -374,6 +411,16 @@ h3 {
         padding: 1.1vh 2vw;
 
     }
+    .uredi{
+        font-size: 2.5vw;
+        padding: 1.1vh 2vw;
+        right: 36vw;
+    }
+    .editovanje{
+        width: 70vw;
+        top: 7vh;
+        left: 6vw;
+    }
 
 
 
@@ -423,8 +470,9 @@ h3 {
     }
 
     h3 {
-        font-size: 16px;
-        left: 4vw;
+        font-size: 20px;
+        left: 5vw;
+        top: 2vh;
     }
 
     .zadatak {
@@ -445,6 +493,18 @@ h3 {
         font-size: 1.1vw;
         padding: 1.1vh 2vw;
 
+    }
+    .uredi{
+        font-size: 1.1vw;
+        padding: 1.1vh 2vw;
+        right: 21vw;
+    }
+    .editovanje{
+        width: 40vw;
+        top: 8vh;
+        left: 2vw;
+        font-size: 16px;
+        padding: 15px;
     }
 
 
@@ -516,6 +576,20 @@ h3 {
         font-size: 1.1vw;
         padding: 1.1vh 2vw;
 
+    }
+
+    .uredi{
+        font-size: 1.1vw;
+        padding: 1.1vh 2vw;
+        right: 21vw;
+    }
+
+    .editovanje{
+        width: 40vw;
+        top: 8vh;
+        left: 2vw;
+        font-size: 16px;
+        padding: 15px;
     }
 
 
@@ -598,6 +672,12 @@ h3 {
 
     }
 
+    .uredi{
+        font-size: 0.9vw;
+        padding: 1.1vh 2vw;
+        right: 15vw;
+    }
+
 
 
 
@@ -667,6 +747,12 @@ h3 {
         font-size: 0.9vw;
         padding: 1.1vh 2vw;
 
+    }
+
+    .uredi{
+        font-size: 0.9vw;
+        padding: 1.1vh 2vw;
+        right: 15vw;
     }
 
 

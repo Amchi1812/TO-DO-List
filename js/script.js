@@ -32,8 +32,9 @@ function posljednjiDodan() {
     let zadatak = posljednji.sadrzaj;
 
     let element = document.getElementById("posljednjiD");
+    
 
-    element.innerHTML = "Zadatak " + duzina + "#" + "<br>" + zadatak;
+    element.innerHTML = "Zadatak " + duzina + "#" + "<br>" +  zadatak;
 
     if (posljednji.gotovo) {
         element.style.color = "#888";

@@ -12,16 +12,19 @@ The application allows users to easily add, organize, complete, and remove tasks
 Displays the complete list of tasks with options to:
 - Mark tasks as completed
 - Delete tasks permanently
+- Tasks can also be **edited**
 
 ### Completed Tasks Page
 Displays only tasks that are marked as finished:
 - Tasks can be **unchecked** to move them back to active tasks
 - Tasks can also be **deleted**
+- Tasks can also be **edited**
 
 ### Unfinished Tasks Page
 Displays tasks that are not yet completed:
 - Tasks can be **marked as completed**
 - Tasks can be **deleted**
+- Tasks can also be **edited**
 
 - **Responsive design** that adapts to different screen sizes for better usability on desktop and mobile devices
 

@@ -57,22 +57,24 @@ function render() {
             zadatak.style.textDecoration = "line-through";
         }
 
-        let brojKaraktera= t.sadrzaj.length;
+        let brojKaraktera = t.sadrzaj.length;
 
 
-            if(brojKaraktera>21){
-                
-                zadatak.style.fontSize ="11px";
+        if (brojKaraktera > 21) {
 
-            }else{naslov.style.fontSize ="16px";
-                zadatak.style.fontSize ="16px";}
+            zadatak.style.fontSize = "11px";
 
-        
+        } else {
+            naslov.style.fontSize = "16px";
+            zadatak.style.fontSize = "16px";
+        }
+
+
 
 
 
         check.addEventListener('change', function () {
-            
+
             if (check.checked) {
                 t.gotovo = true;
                 naslov.style.color = "#888";
@@ -91,24 +93,70 @@ function render() {
 
             }
 
-            
-            
+
+
         })
 
 
         let izbrisi = document.createElement('button');
-        izbrisi.innerHTML ="IZBRIŠI";
+        izbrisi.innerHTML = "IZBRIŠI";
         izbrisi.classList.add('izbrisi');
         osnovni.appendChild(izbrisi);
 
-        izbrisi.addEventListener('click',function(){
+        let uredi = document.createElement('button');
+        uredi.innerHTML = "UREDI";
+        uredi.classList.add('uredi');
+        osnovni.appendChild(uredi);
+
+        uredi.addEventListener('click', function () {
+            let input = document.createElement('input');
+            input.type = "text";
+            input.value = t.sadrzaj;
+            input.classList.add('editovanje');
+
+            osnovni.replaceChild(input, zadatak);
+            input.focus();
+
+            
+
+            input.addEventListener('keydown', function (e) {
+                if (e.key === "Enter") {
+                    sacuvaj();
+                }
+
+                
+
+            })
+            function sacuvaj() {
+                let noviTekst = input.value.trim();
+
+
+                if (noviTekst.length > 120) {
+                    alert("Max 120 karaktera!");
+          
+                } else if (noviTekst == "") {
+                    alert("Greška! Nevalidan unos!");
+                    
+
+                } else { t.sadrzaj = noviTekst; }
+
+                saveItem();
+                render();
+            }
+
+
+        })
+
+
+
+        izbrisi.addEventListener('click', function () {
             niz.splice(index, 1);
             saveItem();
-            
+
             render();
         })
 
-        
+
 
 
 
